@@ -1,0 +1,4 @@
+baseURL = "http://localhost/"
+languageCode = "vi-vn"
+title = "Giới thiệu cá nhân"
+theme = "ananke"
