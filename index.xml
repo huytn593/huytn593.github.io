@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Giới thiệu cá nhân</title>
+    <link>http://localhost/</link>
+    <description>Recent content on Giới thiệu cá nhân</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Tue, 14 Jan 2025 07:07:07 +0100</lastBuildDate>
+    <atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giới thiệu bản thân</title>
+      <link>http://localhost/posts/my-first-post/</link>
+      <pubDate>Tue, 14 Jan 2025 07:07:07 +0100</pubDate>
+      <guid>http://localhost/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Xin chào!&lt;/p&gt;&#xA;&lt;p&gt;Mình là Trần Phạm Gia Huy, một người yêu thích công nghệ và lập trình.&lt;/p&gt;&#xA;&lt;p&gt;Về mình&lt;/p&gt;&#xA;&lt;p&gt;Mình quan tâm đến phát triển phần mềm, đặc biệt là:&lt;/p&gt;&#xA;&lt;p&gt;- Web Development (Frontend &amp;amp; Backend)&lt;/p&gt;&#xA;&lt;p&gt;- Xây dựng hệ thống theo mô hình MVC, REST API&lt;/p&gt;&#xA;&lt;p&gt;- Tìm hiểu về hệ thống, mạng máy tính và bảo mật&lt;/p&gt;&#xA;&lt;p&gt;- Khám phá công nghệ mới và tối ưu trải nghiệm người dùng&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
