@@ -1,4 +1,4 @@
-baseURL = "http://localhost/"
+baseURL = "https://huytn593.github.io/"
 languageCode = "vi-vn"
 title = "Giới thiệu cá nhân"
 theme = "ananke"
