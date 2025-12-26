@@ -23,7 +23,8 @@
 /* 3. Chỉnh lại text: Đẩy sát lên trên và căn trái */
 #projects .card-body {
     padding-top: 0 !important;
-    margin-top: -10px !important; /* Kéo text lên cao hơn một chút */
+    margin-top: -10px !important;
+    /* Kéo text lên cao hơn một chút */
     text-align: left !important;
 }
 
@@ -35,10 +36,554 @@
 }
 
 /* 5. (QUAN TRỌNG) Ép cột rộng ra 100% để text không bị bóp nghẹt */
-#projects .col-lg-4, 
-#projects .col-md-6, 
+/* --- FORCE HIDE PROJECTS IMAGES (FIXED) --- */
+
+/* 1. Nhắm vào mọi thẻ IMG trong khu vực Projects */
+#projects img,
+#projects .card-img-top,
+#projects .card-img,
+.project-card img {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 2. Ẩn luôn khung chứa ảnh (để tránh viền trắng khi ảnh mất) */
+#projects .card-header,
+#projects .image-holder {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 3. Chỉnh lại text: Đẩy sát lên trên và căn trái */
+#projects .card-body {
+    padding-top: 0 !important;
+    margin-top: -10px !important;
+    /* Kéo text lên cao hơn một chút */
+    text-align: left !important;
+}
+
+/* 4. Xóa nền và viền của thẻ Card để giống CV */
+#projects .card {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 5. (QUAN TRỌNG) Ép cột rộng ra 100% để text không bị bóp nghẹt */
+#projects .col-lg-4,
+#projects .col-md-6,
 #projects .col-12 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
+}
+
+/* ================= BLOGS SECTION ================= */
+#blogs .blog-card {
+    background: #1e1e1e;
+    /* Dark background similar to theme */
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* --- FORCE HIDE PROJECTS IMAGES (FIXED) --- */
+
+/* 1. Nhắm vào mọi thẻ IMG trong khu vực Projects */
+#projects img,
+#projects .card-img-top,
+#projects .card-img,
+.project-card img {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 2. Ẩn luôn khung chứa ảnh (để tránh viền trắng khi ảnh mất) */
+#projects .card-header,
+#projects .image-holder {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 3. Chỉnh lại text: Đẩy sát lên trên và căn trái */
+#projects .card-body {
+    padding-top: 0 !important;
+    margin-top: -10px !important;
+    /* Kéo text lên cao hơn một chút */
+    text-align: left !important;
+}
+
+/* 4. Xóa nền và viền của thẻ Card để giống CV */
+#projects .card {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 5. (QUAN TRỌNG) Ép cột rộng ra 100% để text không bị bóp nghẹt */
+/* --- FORCE HIDE PROJECTS IMAGES (FIXED) --- */
+
+/* 1. Nhắm vào mọi thẻ IMG trong khu vực Projects */
+#projects img,
+#projects .card-img-top,
+#projects .card-img,
+.project-card img {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* 2. Ẩn luôn khung chứa ảnh (để tránh viền trắng khi ảnh mất) */
+#projects .card-header,
+#projects .image-holder {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 3. Chỉnh lại text: Đẩy sát lên trên và căn trái */
+#projects .card-body {
+    padding-top: 0 !important;
+    margin-top: -10px !important;
+    /* Kéo text lên cao hơn một chút */
+    text-align: left !important;
+}
+
+/* 4. Xóa nền và viền của thẻ Card để giống CV */
+#projects .card {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 5. (QUAN TRỌNG) Ép cột rộng ra 100% để text không bị bóp nghẹt */
+#projects .col-lg-4,
+#projects .col-md-6,
+#projects .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* ================= THEME TOGGLE BUTTON ================= */
+#theme-toggle {
+    background: var(--secondary-color) !important;
+    border: 2px solid var(--text-secondary-color) !important;
+    border-radius: 50% !important;
+    width: 42px !important;
+    height: 42px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    color: var(--text-color) !important;
+    position: relative !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+#theme-toggle:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transform: scale(1.05) rotate(15deg) !important;
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.4) !important;
+    color: #fff !important;
+}
+
+#theme-toggle:active {
+    transform: scale(0.95) !important;
+}
+
+#theme-toggle svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Moon icon - shown in light mode */
+body:not(.dark) #theme-toggle #moon {
+    display: block !important;
+    color: #fbbf24 !important;
+}
+
+body:not(.dark) #theme-toggle #sun {
+    display: none !important;
+}
+
+/* Sun icon - shown in dark mode */
+body.dark #theme-toggle #moon {
+    display: none !important;
+}
+
+body.dark #theme-toggle #sun {
+    display: block !important;
+    color: #fbbf24 !important;
+}
+
+body.dark #theme-toggle {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+}
+
+body.dark #theme-toggle:hover {
+    background: rgba(251, 191, 36, 0.2) !important;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3) !important;
+    color: #fbbf24 !important;
+}
+
+body:not(.dark) #theme-toggle:hover #moon {
+    color: #fff !important;
+}
+
+body.dark #theme-toggle:hover #sun {
+    color: #fff !important;
+}
+
+/* ================= SINGLE POST IMAGE ================= */
+#single .featured-image {
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+#single .featured-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    #single .featured-image img {
+        max-height: 300px;
+    }
+}
+
+/* ================= BLOGS SECTION ================= */
+#blogs {
+    min-height: 70vh;
+    padding: 4rem 0 !important;
+}
+
+#blogs .container > h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#blogs .container > h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00bcd4, #0097a7);
+    border-radius: 2px;
+}
+
+#blogs .blog-card {
+    background: var(--secondary-color);
+    border: 1px solid var(--text-secondary-color);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    max-width: 100%;
+    min-height: 450px;
+}
+
+#blogs .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 188, 212, 0.2);
+    border-color: #00bcd4;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Blog Image */
+#blogs .blog-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--background-color);
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 16px 16px 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+#blogs .blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#blogs .blog-card:hover .blog-image {
+    transform: scale(1.05);
+}
+
+/* Ensure card body doesn't overflow */
+#blogs .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+#blogs .card-title {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+}
+
+#blogs .card-text {
+    color: var(--text-secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 4.5rem;
+    max-height: 4.5rem;
+}
+
+#blogs .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary-color);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--text-secondary-color);
+}
+
+#blogs .blog-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#blogs .read-more {
+    color: #00bcd4;
+    font-weight: 500;
+    margin-top: auto;
+    padding-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#blogs .blog-card:hover .read-more {
+    color: #00bcd4;
+    transform: translateX(5px);
+}
+
+#blogs strong {
+    color: #00bcd4;
+}
+
+/* Blog Empty State */
+#blogs .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary-color);
+}
+
+#blogs .empty-state svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+/* Blog Tags Badge */
+#blogs .blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+#blogs .blog-tags .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Blog Card Link Reset */
+#blogs .blog-card,
+#blogs .blog-card:hover,
+#blogs .blog-card:focus,
+#blogs .blog-card:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Blog Cards */
+@media (max-width: 992px) {
+    #blogs .blog-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    #blogs .blog-image-wrapper {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    #blogs {
+        padding: 2rem 0 !important;
+    }
+    
+    #blogs .container > h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    #blogs .blog-card {
+        min-height: 400px;
+    }
+    
+    #blogs .blog-image-wrapper {
+        height: 160px;
+    }
+    
+    #blogs .card-body {
+        padding: 1.25rem;
+    }
+    
+    #blogs .card-title {
+        font-size: 1.1rem;
+        min-height: 3rem;
+        max-height: 3rem;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+    
+    #blogs .card-text {
+        font-size: 0.9rem;
+        min-height: 4rem;
+        max-height: 4rem;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+    
+    #blogs .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    #theme-toggle {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    
+    #theme-toggle svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #blogs .container > h3 {
+        font-size: 1.75rem;
+    }
+    
+    #blogs .blog-card {
+        min-height: 380px;
+    }
+    
+    #blogs .blog-image-wrapper {
+        height: 140px;
+    }
+    
+    #blogs .card-title {
+        font-size: 1rem;
+        min-height: 2.8rem;
+        max-height: 2.8rem;
+    }
+    
+    #blogs .card-text {
+        font-size: 0.85rem;
+        min-height: 3.8rem;
+        max-height: 3.8rem;
+    }
+    
+    #blogs .row {
+        margin: 0;
+    }
+    
+    #blogs .col-lg-4,
+    #blogs .col-md-6 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    #theme-toggle {
+        width: 36px !important;
+        height: 36px !important;
+    }
 }

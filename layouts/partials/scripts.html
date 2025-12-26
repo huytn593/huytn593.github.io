@@ -1,0 +1,49 @@
+<script>
+    const localStorageValue = localStorage.getItem("pref-theme");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (localStorageValue === "dark" || (!localStorageValue && mediaQuery)) {
+        document.documentElement.classList.add("dark");
+        document.body.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+        document.body.classList.remove("dark");
+    }
+</script>
+
+{{ if .Site.Params.navbar.stickyNavBar.enable | default false }}
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const showNavBarOnScrollUp = {{ .Site.Params.navbar.stickyNavBar.showOnScrollUp | default false }};
+
+    window.addEventListener("scroll", () => {
+        const header = document.getElementById("profileHeader");
+        if (!header) return;
+
+        const currentScrollPos = window.pageYOffset;
+        const show = showNavBarOnScrollUp
+            ? prevScrollPos > currentScrollPos
+            : currentScrollPos > 0;
+
+        header.classList.toggle("showHeaderOnTop", show && currentScrollPos !== 0);
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+{{ end }}
+
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            if (document.body.classList.contains("dark")) {
+                document.body.classList.remove('dark');
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                document.documentElement.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        });
+    }
+</script>

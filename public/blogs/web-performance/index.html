@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/blogs/web-performance/">
+  <meta property="og:site_name" content="Trần Phạm Gia Huy | Portfolio">
+  <meta property="og:title" content="Tối ưu hóa hiệu năng Website">
+  <meta property="og:description" content="Tại sao Performance lại quan trọng? Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:
+User experience: 53% users rời trang nếu load time &gt; 3 giây SEO ranking: Google ưu tiên trang web nhanh Conversion rate: Mỗi giây delay giảm 7% conversions Mobile users: 4G/5G vẫn có latency cao ở nhiều khu vực Core Web Vitals - Metrics quan trọng Google sử dụng 3 metrics chính để đánh giá UX:">
+  <meta property="og:locale" content="vi_vn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-05-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-20T00:00:00+00:00">
+    <meta property="article:tag" content="Performance">
+    <meta property="article:tag" content="Web Vitals">
+    <meta property="article:tag" content="Optimization">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tối ưu hóa hiệu năng Website">
+  <meta name="twitter:description" content="Tại sao Performance lại quan trọng? Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:
+User experience: 53% users rời trang nếu load time &gt; 3 giây SEO ranking: Google ưu tiên trang web nhanh Conversion rate: Mỗi giây delay giảm 7% conversions Mobile users: 4G/5G vẫn có latency cao ở nhiều khu vực Core Web Vitals - Metrics quan trọng Google sử dụng 3 metrics chính để đánh giá UX:">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Tại sao Performance lại quan trọng?
+Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:
+
+User experience: 53% users rời trang nếu load time &gt; 3 giây
+SEO ranking: Google ưu tiên trang web nhanh
+Conversion rate: Mỗi giây delay giảm 7% conversions
+Mobile users: 4G/5G vẫn có latency cao ở nhiều khu vực
+
+Core Web Vitals - Metrics quan trọng
+Google sử dụng 3 metrics chính để đánh giá UX:">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <title>
+Tối ưu hóa hiệu năng Website | Trần Phạm Gia Huy | Portfolio
+
+    </title>
+</head>
+
+<body class="light"><header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                Trần Phạm Gia Huy
+            </a>
+
+            
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg height="24" width="24" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+                    </path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs">Blog cá nhân</a>
+                    </li>
+
+                    
+
+                    
+                    
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link" aria-label="Toggle theme">
+                            
+                            <svg id="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            
+                            <svg id="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header><div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Tối ưu hóa hiệu năng Website</h1>
+            <div class="text-center">
+              
+              Trần Phạm Gia Huy
+              <small>|</small>
+              
+              May 20, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" 
+                 src="/images/blog3.png" 
+                 alt="Tối ưu hóa hiệu năng Website"
+                 loading="eager">
+          </div>
+          
+          <article class="page-content  p-2">
+            <h2 id="tại-sao-performance-lại-quan-trọng">Tại sao Performance lại quan trọng?</h2>
+<p>Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:</p>
+<ul>
+<li><strong>User experience</strong>: 53% users rời trang nếu load time &gt; 3 giây</li>
+<li><strong>SEO ranking</strong>: Google ưu tiên trang web nhanh</li>
+<li><strong>Conversion rate</strong>: Mỗi giây delay giảm 7% conversions</li>
+<li><strong>Mobile users</strong>: 4G/5G vẫn có latency cao ở nhiều khu vực</li>
+</ul>
+<h2 id="core-web-vitals---metrics-quan-trọng">Core Web Vitals - Metrics quan trọng</h2>
+<p>Google sử dụng 3 metrics chính để đánh giá UX:</p>
+<h3 id="1-largest-contentful-paint-lcp">1. Largest Contentful Paint (LCP)</h3>
+<p><strong>Mục tiêu: &lt; 2.5s</strong></p>
+<p>Thời gian để phần tử lớn nhất trên viewport được render.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Optimize LCP với preload critical resources
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">head</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hero-image.jpg&#34;</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preconnect&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://fonts.googleapis.com&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/head&gt;</span>
+</span></span></code></pre></div><h3 id="2-first-input-delay-fid">2. First Input Delay (FID)</h3>
+<p><strong>Mục tiêu: &lt; 100ms</strong></p>
+<p>Thời gian từ khi user tương tác đến khi browser phản hồi.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD - Blocking main thread
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">processHeavyTask</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Heavy computation
+</span></span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD - Use Web Workers
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">worker</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Worker</span>(<span style="color:#e6db74">&#39;heavy-task.js&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">postMessage</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">onmessage</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Result:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="3-cumulative-layout-shift-cls">3. Cumulative Layout Shift (CLS)</h3>
+<p><strong>Mục tiêu: &lt; 0.1</strong></p>
+<p>Tránh layout shifts bất ngờ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* ❌ BAD - No dimensions */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* ✅ GOOD - Reserve space */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">aspect-ratio</span>: <span style="color:#ae81ff">16</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="techniques-tối-ưu-hiệu-năng">Techniques tối ưu hiệu năng</h2>
+<h3 id="1-image-optimization">1. Image Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Modern format với fallback --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">picture</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hero.webp&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/webp&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hero.avif&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/avif&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hero.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hero&#34;</span> <span style="color:#a6e22e">loading</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lazy&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;800&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;600&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">picture</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Responsive images --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    /small.jpg 400w,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    /medium.jpg 800w,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    /large.jpg 1200w
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/medium.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Responsive&#34;</span>
+</span></span><span style="display:flex;"><span>&gt;
+</span></span></code></pre></div><h3 id="2-code-splitting">2. Code Splitting</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// React lazy loading
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">lazy</span>, <span style="color:#a6e22e">Suspense</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">HeavyComponent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lazy</span>(() =&gt; <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./HeavyComponent&#39;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Suspense</span> <span style="color:#a6e22e">fallback</span><span style="color:#f92672">=</span>{<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Loading</span> <span style="color:#f92672">/&gt;</span>}<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HeavyComponent</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Suspense&gt;</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Next.js dynamic imports
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">dynamic</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;next/dynamic&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">DynamicChart</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dynamic</span>(() =&gt; <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./Chart&#39;</span>), {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">loading</span><span style="color:#f92672">:</span> () =&gt; <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Loading</span> <span style="color:#a6e22e">chart</span>...<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/p&gt;,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ssr</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> <span style="color:#75715e">// Don&#39;t render on server
+</span></span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="3-lazy-loading">3. Lazy Loading</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Intersection Observer for lazy loading
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">IntersectionObserver</span>((<span style="color:#a6e22e">entries</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">entries</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">entry</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">isIntersecting</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">target</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">src</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">unobserve</span>(<span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;img[data-src]&#39;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">img</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="4-caching-strategies">4. Caching Strategies</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Service Worker caching
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;fetch&#39;</span>, (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">respondWith</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Cache hit - return cached response
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">response</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Cache miss - fetch from network
+</span></span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">response</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Cache the new response
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;v1&#39;</span>).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">cache</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">clone</span>());
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="5-http2--http3">5. HTTP/2 &amp; HTTP/3</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#75715e"># Nginx HTTP/2 configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">listen</span> <span style="color:#ae81ff">443</span> <span style="color:#e6db74">ssl</span> <span style="color:#e6db74">http2</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Enable server push
+</span></span></span><span style="display:flex;"><span>  <span style="color:#f92672">http2_push</span> <span style="color:#e6db74">/css/main.css</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">http2_push</span> <span style="color:#e6db74">/js/app.js</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Optimize buffer sizes
+</span></span></span><span style="display:flex;"><span>  <span style="color:#f92672">http2_max_field_size</span> <span style="color:#ae81ff">16k</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">http2_max_header_size</span> <span style="color:#ae81ff">32k</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="css-optimization">CSS Optimization</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* ❌ BAD - Inline styles everywhere */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: red; font-size: 16px;&#34;</span><span style="color:#f92672">&gt;...&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* ✅ GOOD - CSS classes */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">error-text</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* CSS containment for rendering performance */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">contain</span>: layout <span style="color:#66d9ef">style</span> paint;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Use CSS variables for theme switching */</span>
+</span></span><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
+</span></span><span style="display:flex;"><span>  --primary-color: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>  --text-color: <span style="color:#ae81ff">#333</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">dark-mode</span> {
+</span></span><span style="display:flex;"><span>  --primary-color: <span style="color:#ae81ff">#0056b3</span>;
+</span></span><span style="display:flex;"><span>  --text-color: <span style="color:#ae81ff">#fff</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="javascript-performance">JavaScript Performance</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ BAD - Multiple DOM queries
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;list&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">`&lt;li&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">items</span>[<span style="color:#a6e22e">i</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/li&gt;`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ GOOD - Batch DOM updates
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;list&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fragment</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createDocumentFragment</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;li&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fragment</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">fragment</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Debounce expensive operations
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">debounce</span>(<span style="color:#a6e22e">func</span>, <span style="color:#a6e22e">wait</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timeout</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">executedFunction</span>(...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timeout</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">timeout</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">func</span>(...<span style="color:#a6e22e">args</span>), <span style="color:#a6e22e">wait</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;resize&#39;</span>, <span style="color:#a6e22e">debounce</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Expensive resize handler
+</span></span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">250</span>));
+</span></span></code></pre></div><h2 id="monitoring--measuring">Monitoring &amp; Measuring</h2>
+<h3 id="lighthouse-ci">Lighthouse CI</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># .github/workflows/lighthouse.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Lighthouse CI</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>: [<span style="color:#ae81ff">push]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">lighthouse</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run Lighthouse</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">treosh/lighthouse-ci-action@v9</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">urls</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            https://example.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            https://example.com/blog</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">uploadArtifacts</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h3 id="real-user-monitoring-rum">Real User Monitoring (RUM)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Track real user metrics
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">getCLS</span>, <span style="color:#a6e22e">getFID</span>, <span style="color:#a6e22e">getFCP</span>, <span style="color:#a6e22e">getLCP</span>, <span style="color:#a6e22e">getTTFB</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;web-vitals&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sendToAnalytics</span>(<span style="color:#a6e22e">metric</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Send to analytics service
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/analytics&#39;</span>, {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;POST&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">metric</span>)
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getCLS</span>(<span style="color:#a6e22e">sendToAnalytics</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getFID</span>(<span style="color:#a6e22e">sendToAnalytics</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getFCP</span>(<span style="color:#a6e22e">sendToAnalytics</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getLCP</span>(<span style="color:#a6e22e">sendToAnalytics</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getTTFB</span>(<span style="color:#a6e22e">sendToAnalytics</span>);
+</span></span></code></pre></div><h2 id="cdn--edge-computing">CDN &amp; Edge Computing</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Cloudflare Workers example
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;fetch&#39;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">respondWith</span>(<span style="color:#a6e22e">handleRequest</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>));
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleRequest</span>(<span style="color:#a6e22e">request</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Cache at edge
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cache</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">caches</span>.<span style="color:#66d9ef">default</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">request</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">response</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">request</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Cache for 1 hour
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Response</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">headers</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;Cache-Control&#39;</span>, <span style="color:#e6db74">&#39;max-age=3600&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">waitUntil</span>(<span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">clone</span>()));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="performance-budget">Performance Budget</h2>
+<p>Đặt giới hạn cho các metrics:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Budget</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Total page size</td>
+          <td>&lt; 1.5 MB</td>
+      </tr>
+      <tr>
+          <td>JavaScript bundle</td>
+          <td>&lt; 300 KB</td>
+      </tr>
+      <tr>
+          <td>CSS bundle</td>
+          <td>&lt; 100 KB</td>
+      </tr>
+      <tr>
+          <td>Images</td>
+          <td>&lt; 500 KB</td>
+      </tr>
+      <tr>
+          <td>LCP</td>
+          <td>&lt; 2.5s</td>
+      </tr>
+      <tr>
+          <td>FID</td>
+          <td>&lt; 100ms</td>
+      </tr>
+      <tr>
+          <td>CLS</td>
+          <td>&lt; 0.1</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="best-practices-checklist">Best Practices Checklist</h2>
+<p>✅ <strong>Images</strong></p>
+<ul>
+<li>Sử dụng WebP/AVIF formats</li>
+<li>Lazy load images below fold</li>
+<li>Set explicit dimensions</li>
+<li>Use responsive images</li>
+</ul>
+<p>✅ <strong>JavaScript</strong></p>
+<ul>
+<li>Code splitting</li>
+<li>Tree shaking</li>
+<li>Minification &amp; compression</li>
+<li>Remove unused code</li>
+</ul>
+<p>✅ <strong>CSS</strong></p>
+<ul>
+<li>Critical CSS inline</li>
+<li>Defer non-critical CSS</li>
+<li>Remove unused styles</li>
+<li>Use CSS containment</li>
+</ul>
+<p>✅ <strong>Fonts</strong></p>
+<ul>
+<li>Limit font families (≤ 2)</li>
+<li>Use font-display: swap</li>
+<li>Preload critical fonts</li>
+<li>Subset fonts</li>
+</ul>
+<p>✅ <strong>Caching</strong></p>
+<ul>
+<li>Cache static assets</li>
+<li>Use service workers</li>
+<li>Set proper cache headers</li>
+<li>Version assets</li>
+</ul>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Performance optimization không phải là một lần làm xong mà là quá trình liên tục:</p>
+<ol>
+<li><strong>Measure</strong>: Sử dụng Lighthouse, Web Vitals</li>
+<li><strong>Optimize</strong>: Implement các techniques phù hợp</li>
+<li><strong>Monitor</strong>: Track real user metrics</li>
+<li><strong>Iterate</strong>: Continuous improvement</li>
+</ol>
+<p>Một website nhanh không chỉ làm user hài lòng mà còn tăng SEO ranking và conversion rate. Hãy đầu tư vào performance từ đầu, không đợi đến khi có vấn đề! ⚡</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+            <h5>
+              Table Of Contents
+            </h5>
+            <div class="toc-content">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tại-sao-performance-lại-quan-trọng">Tại sao Performance lại quan trọng?</a></li>
+    <li><a href="#core-web-vitals---metrics-quan-trọng">Core Web Vitals - Metrics quan trọng</a>
+      <ul>
+        <li><a href="#1-largest-contentful-paint-lcp">1. Largest Contentful Paint (LCP)</a></li>
+        <li><a href="#2-first-input-delay-fid">2. First Input Delay (FID)</a></li>
+        <li><a href="#3-cumulative-layout-shift-cls">3. Cumulative Layout Shift (CLS)</a></li>
+      </ul>
+    </li>
+    <li><a href="#techniques-tối-ưu-hiệu-năng">Techniques tối ưu hiệu năng</a>
+      <ul>
+        <li><a href="#1-image-optimization">1. Image Optimization</a></li>
+        <li><a href="#2-code-splitting">2. Code Splitting</a></li>
+        <li><a href="#3-lazy-loading">3. Lazy Loading</a></li>
+        <li><a href="#4-caching-strategies">4. Caching Strategies</a></li>
+        <li><a href="#5-http2--http3">5. HTTP/2 &amp; HTTP/3</a></li>
+      </ul>
+    </li>
+    <li><a href="#css-optimization">CSS Optimization</a></li>
+    <li><a href="#javascript-performance">JavaScript Performance</a></li>
+    <li><a href="#monitoring--measuring">Monitoring &amp; Measuring</a>
+      <ul>
+        <li><a href="#lighthouse-ci">Lighthouse CI</a></li>
+        <li><a href="#real-user-monitoring-rum">Real User Monitoring (RUM)</a></li>
+      </ul>
+    </li>
+    <li><a href="#cdn--edge-computing">CDN &amp; Edge Computing</a></li>
+    <li><a href="#performance-budget">Performance Budget</a></li>
+    <li><a href="#best-practices-checklist">Best Practices Checklist</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+  </ul>
+</nav>
+            </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/performance" target="_blank" >Performance</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/web-vitals" target="_blank" >Web Vitals</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/optimization" target="_blank" >Optimization</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank"
+                    href="https://www.linkedin.com/feed/?shareActive=true&text= http%3a%2f%2flocalhost%3a1313%2fblogs%2fweb-performance%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank"
+                    href='https://twitter.com/share?text=T%e1%bb%91i%20%c6%b0u%20h%c3%b3a%20hi%e1%bb%87u%20n%c4%83ng%20Website&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fweb-performance%2f&hashtags=Performance%2cWeb%20Vitals%2cOptimization'>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank"
+                    href="https://api.whatsapp.com/send?text=T%e1%bb%91i%20%c6%b0u%20h%c3%b3a%20hi%e1%bb%87u%20n%c4%83ng%20Website: http%3a%2f%2flocalhost%3a1313%2fblogs%2fweb-performance%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank"
+                    href='mailto:?subject=T%e1%bb%91i%20%c6%b0u%20h%c3%b3a%20hi%e1%bb%87u%20n%c4%83ng%20Website&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fblogs%2fweb-performance%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+    aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  false ;
+  if (stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+    </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+            &copy; 2025  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script><script>
+    const localStorageValue = localStorage.getItem("pref-theme");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (localStorageValue === "dark" || (!localStorageValue && mediaQuery)) {
+        document.documentElement.classList.add("dark");
+        document.body.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+        document.body.classList.remove("dark");
+    }
+</script>
+
+
+
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            if (document.body.classList.contains("dark")) {
+                document.body.classList.remove('dark');
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                document.documentElement.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        });
+    }
+</script>
+    <section id="search-content" class="py-2">
+        <div class="container" id="search-results"></div>
+    </section>
+</body>
+
+</html>

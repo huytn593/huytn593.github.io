@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TypeScript on Trần Phạm Gia Huy | Portfolio</title>
+    <link>http://localhost:1313/tags/typescript/</link>
+    <description>Recent content in TypeScript on Trần Phạm Gia Huy | Portfolio</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TypeScript Best Practices cho Developer</title>
+      <link>http://localhost:1313/blogs/typescript-best-practices/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/typescript-best-practices/</guid>
+      <description>&lt;h2 id=&#34;tại-sao-nên-sử-dụng-typescript&#34;&gt;Tại sao nên sử dụng TypeScript?&lt;/h2&gt;&#xA;&lt;p&gt;TypeScript đã trở thành một công cụ không thể thiếu trong phát triển web hiện đại. Với khả năng cung cấp type safety, TypeScript giúp giảm thiểu bugs và cải thiện chất lượng code đáng kể.&lt;/p&gt;&#xA;&lt;h2 id=&#34;type-safety-và-code-quality&#34;&gt;Type Safety và Code Quality&lt;/h2&gt;&#xA;&lt;p&gt;Một trong những lợi ích lớn nhất của TypeScript là type safety. Khi bạn định nghĩa types cho các biến, functions, và objects, TypeScript sẽ giúp bạn phát hiện lỗi ngay trong quá trình development thay vì phải đợi đến runtime.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

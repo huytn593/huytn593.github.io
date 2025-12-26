@@ -113,8 +113,6 @@
 
   
   
-    <link rel="stylesheet" href="/style.css">
-  
 
   <title>
 Trần Phạm Gia Huy | Portfolio
@@ -124,148 +122,91 @@ Trần Phạm Gia Huy | Portfolio
 
 <body class="light">
   
-  
-<script>
-    let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.documentElement.classList.add('dark');
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            document.documentElement.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.documentElement.classList.add('dark');
-                document.body.classList.add('dark');
-            }
-            break;
-    }
-</script>
-
-
-
-
-
-<header id="profileHeader">
+  <header id="profileHeader">
     <nav class="pt-3 navbar navbar-expand-lg ">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+
             
             <a class="navbar-brand primary-font text-wrap" href="/">
                 
                 Trần Phạm Gia Huy
-                
             </a>
 
             
-                <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
-                        aria-label="Search" oninput="searchOnChange(event)">
-                </div>
             
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
-                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                <svg height="24" width="24" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+                    </path>
                 </svg>
             </button>
 
             
-            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+            <div class="collapse navbar-collapse primary-font" id="navbarContent">
                 <ul class="navbar-nav ms-auto text-center">
-                    
-                        <li class="nav-item navbar-text d-block d-md-none">
-                            <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
-                            </div>
-                        </li>
-                    
 
                     
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#about" aria-label="about">
-                            Giới thiệu
-                        </a>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
                     </li>
                     
+                    
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs">Blog cá nhân</a>
+                    </li>
+
+                    
                     
 
                     
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#education"
-                            aria-label="education">
-                            Học vấn
-                        </a>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
                     </li>
                     
-
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#projects"
-                            aria-label="projects">
-                            Dự án
-                        </a>
-                    </li>
-                    
-
-                    
-
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#contact"
-                            aria-label="contact">
-                            Liên hệ
-                        </a>
-                    </li>
-                    
-
                     
 
                     
                     
-
-                    
-                    <li class="nav-item navbar-text">
-                        
-                        <div class="text-center">
-                            <button id="theme-toggle">
-                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                </svg>
-                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                </svg>
-                            </button>
-                        </div>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link" aria-label="Toggle theme">
+                            
+                            <svg id="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            
+                            <svg id="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
                     </li>
                     
 
                 </ul>
-
             </div>
         </div>
     </nav>
-</header>
-<div id="content">
+</header><div id="content">
 <section id="hero" class="py-5 align-middle">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8 content " id="primary-font">
+            <div class="col-sm-12 col-md-12 col-lg-8 content "
+                id="primary-font">
                 <span class="subtitle">
                     Xin chào, mình là
                 </span>
@@ -280,13 +221,6 @@ Trần Phạm Gia Huy | Portfolio
                 </p>
                 <div class="row">
                     <div class="col-auto h-100">
-                        
-                        <a href="https://drive.google.com/drive/folders/1dxly8Fi8glmiynxISlQHBSAZSzsb6rLe?usp=drive_link" class="btn" ZgotmplZ
-			  
-                          target="_blank"
-                          >
-                            Tải CV
-                        </a>
                         
                     </div>
                     <div class="col-auto px-0 h-100"><span>
@@ -317,11 +251,11 @@ Trần Phạm Gia Huy | Portfolio
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
-                    <div class="col-sm-12 col-md-9 pt-5 image  px-5 px-md-5 px-lg-0 text-center">
+                    <div
+                        class="col-sm-12 col-md-9 pt-5 image  px-5 px-md-5 px-lg-0 text-center">
                         <img src="/images/avatar.png"
                             class="img-thumbnail mx-auto"
-                            alt=""
-                        >
+                            alt="">
                     </div>
                 </div>
             </div>
@@ -613,129 +547,6 @@ Mình thích học thông qua các dự án thực tế và luôn sẵn sàng h�
 </section>
 
 
-<section id="education" class="py-5">
-    <div class="container">
-        <h3 class="text-center">Học vấn</h3>
-        <div class="row justify-content-center py-5">
-            
-            
-            <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    
-
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small></small>
-                                </div>
-                                <h5 class="card-title">Đại học Công Nghệ TP.HCM (HUTECH)</h5>
-                                
-                                
-                                
-                                
-
-                                
-                                <div class="py-1 education-content">
-                                    <strong>Chuyên ngành:</strong> Công nghệ Phần mềm<br>
-<strong>Thời gian:</strong> 2022 – 2025
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-<section id="projects" class="section-projects py-5">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-4">
-            <div class="col-12">
-                <h2 class="section-title">Dự án</h2>
-            </div>
-        </div>
-
-        <div class="row">
-            
-            <div class="col-12 mb-4">
-                <div class="project-item">
-                    <h4 class="project-title font-weight-bold text-primary mb-2" style="font-size: 1.25rem;">
-                        Ứng dụng Quản lý Rạp Phim (2024)
-                    </h4>
-                    
-                    <div class="project-content text-muted">
-                        <strong>Công nghệ:</strong> C#, SQL Server, WinForms<br>
-Quản lý rạp phim, lịch chiếu, doanh thu và trạng thái hoạt động.
-                    </div>
-                </div>
-                <hr style="border-top: 1px dashed #444; opacity: 0.3;">
-            </div>
-            
-            <div class="col-12 mb-4">
-                <div class="project-item">
-                    <h4 class="project-title font-weight-bold text-primary mb-2" style="font-size: 1.25rem;">
-                        Dự đoán VN-Index bằng Machine Learning (2024)
-                    </h4>
-                    
-                    <div class="project-content text-muted">
-                        <strong>Công nghệ:</strong> Python, Pandas, Scikit-learn, XGBoost<br>
-Mô hình đạt độ chính xác khoảng 80%, trực quan hóa xu hướng VN-Index.
-                    </div>
-                </div>
-                <hr style="border-top: 1px dashed #444; opacity: 0.3;">
-            </div>
-            
-            <div class="col-12 mb-4">
-                <div class="project-item">
-                    <h4 class="project-title font-weight-bold text-primary mb-2" style="font-size: 1.25rem;">
-                        Ứng dụng Quản lý Sinh viên (2023)
-                    </h4>
-                    
-                    <div class="project-content text-muted">
-                        <strong>Công nghệ:</strong> Java, MySQL, Java Swing<br>
-Thêm/sửa/xóa sinh viên, xuất báo cáo, tìm kiếm theo nhiều tiêu chí.
-                    </div>
-                </div>
-                <hr style="border-top: 1px dashed #444; opacity: 0.3;">
-            </div>
-            
-            <div class="col-12 mb-4">
-                <div class="project-item">
-                    <h4 class="project-title font-weight-bold text-primary mb-2" style="font-size: 1.25rem;">
-                        Hệ thống Xác thực OTP qua SMS (2024)
-                    </h4>
-                    
-                    <div class="project-content text-muted">
-                        <strong>Công nghệ:</strong> C# WinForms, SQL Server, esms.vn API<br>
-Gửi và xác thực OTP, đảm bảo bảo mật thông tin người dùng.
-                    </div>
-                </div>
-                <hr style="border-top: 1px dashed #444; opacity: 0.3;">
-            </div>
-            
-            <div class="col-12 mb-4">
-                <div class="project-item">
-                    <h4 class="project-title font-weight-bold text-primary mb-2" style="font-size: 1.25rem;">
-                        Website bán hàng đơn giản (2023)
-                    </h4>
-                    
-                    <div class="project-content text-muted">
-                        <strong>Công nghệ:</strong> HTML, CSS, JavaScript, Firebase<br>
-Xem sản phẩm, giỏ hàng, đặt hàng, đăng nhập Google.
-                    </div>
-                </div>
-                <hr style="border-top: 1px dashed #444; opacity: 0.3;">
-            </div>
-            
-        </div>
-    </div>
-</section>
 
 <section id="contact" class="py-5">
     <div class="container">
@@ -802,47 +613,37 @@ Xem sản phẩm, giỏ hàng, đặt hàng, đăng nhập Google.
         </div>
     </div>
 </div>
-</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script>
-    if (document.body.className.includes("light")) {
-        document.documentElement.classList.add('dark');
-        document.body.classList.add('dark');
-        localStorage.setItem("pref-theme", 'dark');
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script><script>
+    const localStorageValue = localStorage.getItem("pref-theme");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (localStorageValue === "dark" || (!localStorageValue && mediaQuery)) {
+        document.documentElement.classList.add("dark");
+        document.body.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+        document.body.classList.remove("dark");
     }
 </script>
+
+
+
 <script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            document.documentElement.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            if (document.body.classList.contains("dark")) {
+                document.body.classList.remove('dark');
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                document.documentElement.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        });
+    }
 </script>
-
-
-    <script src="/js/search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
   <section id="search-content" class="py-2">
     <div class="container" id="search-results"></div>
   </section>
