@@ -3,7 +3,7 @@
 [![Hugo](https://img.shields.io/badge/Hugo-0.100+-00ADD8?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-huytn593-181717?style=flat-square&logo=github)](https://github.com/huytn593)
-Vercel: https://huytn593-github-qoikgqqlf-huytn593s-projects.vercel.app/
+[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)
 
 Portfolio website cá nhân được xây dựng bằng Hugo Static Site Generator, kết hợp với theme Hugo Profile. Website bao gồm portfolio cá nhân và blog chia sẻ kiến thức về công nghệ, lập trình và phát triển phần mềm.
 
