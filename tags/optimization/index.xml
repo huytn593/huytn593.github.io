@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Optimization on Trần Phạm Gia Huy</title>
     <link>https://huytn593.github.io/tags/optimization/</link>
     <description>Recent content in Optimization on Trần Phạm Gia Huy</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.153.3</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Sat, 27 Dec 2025 15:40:44 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
     <atom:link href="https://huytn593.github.io/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tối ưu hóa hiệu năng Website</title>
       <link>https://huytn593.github.io/blogs/web-performance/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       <guid>https://huytn593.github.io/blogs/web-performance/</guid>
-      <description>&lt;h2 id=&#34;tại-sao-performance-lại-quan-trọng&#34;&gt;Tại sao Performance lại quan trọng?&lt;/h2&gt;&#xA;&lt;p&gt;Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;User experience&lt;/strong&gt;: 53% users rời trang nếu load time &amp;gt; 3 giây&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;SEO ranking&lt;/strong&gt;: Google ưu tiên trang web nhanh&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conversion rate&lt;/strong&gt;: Mỗi giây delay giảm 7% conversions&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mobile users&lt;/strong&gt;: 4G/5G vẫn có latency cao ở nhiều khu vực&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;core-web-vitals---metrics-quan-trọng&#34;&gt;Core Web Vitals - Metrics quan trọng&lt;/h2&gt;&#xA;&lt;p&gt;Google sử dụng 3 metrics chính để đánh giá UX:&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;tại-sao-performance-lại-quan-trọng&#34;&gt;Tại sao Performance lại quan trọng?&lt;/h2&gt;
+&lt;p&gt;Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;User experience&lt;/strong&gt;: 53% users rời trang nếu load time &amp;gt; 3 giây&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SEO ranking&lt;/strong&gt;: Google ưu tiên trang web nhanh&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conversion rate&lt;/strong&gt;: Mỗi giây delay giảm 7% conversions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile users&lt;/strong&gt;: 4G/5G vẫn có latency cao ở nhiều khu vực&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;core-web-vitals---metrics-quan-trọng&#34;&gt;Core Web Vitals - Metrics quan trọng&lt;/h2&gt;
+&lt;p&gt;Google sử dụng 3 metrics chính để đánh giá UX:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tối ưu Core Web Vitals để cải thiện SEO</title>
       <link>https://huytn593.github.io/blogs/web-vitals-optimization/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://huytn593.github.io/blogs/web-vitals-optimization/</guid>
-      <description>&lt;h2 id=&#34;core-web-vitals-là-gì&#34;&gt;Core Web Vitals là gì?&lt;/h2&gt;&#xA;&lt;p&gt;Core Web Vitals là một tập hợp các metrics quan trọng mà Google sử dụng để đánh giá trải nghiệm người dùng trên website. Ba metrics chính là:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;LCP (Largest Contentful Paint)&lt;/strong&gt;: Thời gian tải nội dung chính&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FID (First Input Delay)&lt;/strong&gt;: Độ trễ khi người dùng tương tác lần đầu&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CLS (Cumulative Layout Shift)&lt;/strong&gt;: Độ ổn định của layout&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;tại-sao-core-web-vitals-quan-trọng&#34;&gt;Tại sao Core Web Vitals quan trọng?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;SEO&lt;/strong&gt;: Google sử dụng Core Web Vitals như một ranking factor&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;User Experience&lt;/strong&gt;: Website nhanh = người dùng hài lòng hơn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conversion&lt;/strong&gt;: Mỗi giây delay có thể giảm 7% conversion rate&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;tối-ưu-lcp-largest-contentful-paint&#34;&gt;Tối ưu LCP (Largest Contentful Paint)&lt;/h2&gt;&#xA;&lt;p&gt;LCP đo thời gian từ khi trang bắt đầu load đến khi phần tử lớn nhất hiển thị. Mục tiêu: &lt;strong&gt;&amp;lt; 2.5 giây&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;core-web-vitals-là-gì&#34;&gt;Core Web Vitals là gì?&lt;/h2&gt;
+&lt;p&gt;Core Web Vitals là một tập hợp các metrics quan trọng mà Google sử dụng để đánh giá trải nghiệm người dùng trên website. Ba metrics chính là:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;LCP (Largest Contentful Paint)&lt;/strong&gt;: Thời gian tải nội dung chính&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FID (First Input Delay)&lt;/strong&gt;: Độ trễ khi người dùng tương tác lần đầu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CLS (Cumulative Layout Shift)&lt;/strong&gt;: Độ ổn định của layout&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tại-sao-core-web-vitals-quan-trọng&#34;&gt;Tại sao Core Web Vitals quan trọng?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SEO&lt;/strong&gt;: Google sử dụng Core Web Vitals như một ranking factor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User Experience&lt;/strong&gt;: Website nhanh = người dùng hài lòng hơn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conversion&lt;/strong&gt;: Mỗi giây delay có thể giảm 7% conversion rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tối-ưu-lcp-largest-contentful-paint&#34;&gt;Tối ưu LCP (Largest Contentful Paint)&lt;/h2&gt;
+&lt;p&gt;LCP đo thời gian từ khi trang bắt đầu load đến khi phần tử lớn nhất hiển thị. Mục tiêu: &lt;strong&gt;&amp;lt; 2.5 giây&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

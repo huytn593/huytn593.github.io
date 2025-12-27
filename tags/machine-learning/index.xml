@@ -1,33 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Machine Learning on Trần Phạm Gia Huy</title>
     <link>https://huytn593.github.io/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on Trần Phạm Gia Huy</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.153.3</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Sat, 27 Dec 2025 15:40:44 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
     <atom:link href="https://huytn593.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tương lai của AI trong Công nghệ phần mềm</title>
       <link>https://huytn593.github.io/blogs/ai-future/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
       <guid>https://huytn593.github.io/blogs/ai-future/</guid>
-      <description>&lt;h2 id=&#34;cuộc-cách-mạng-ai-trong-software-engineering&#34;&gt;Cuộc cách mạng AI trong Software Engineering&lt;/h2&gt;&#xA;&lt;p&gt;Trí tuệ nhân tạo (AI) đang thay đổi cách chúng ta phát triển phần mềm. Từ việc viết code tự động đến kiểm thử và bảo trì, AI đang trở thành công cụ không thể thiếu cho mọi developer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ai-code-assistants---trợ-lý-lập-trình-thông-minh&#34;&gt;AI Code Assistants - Trợ lý lập trình thông minh&lt;/h2&gt;&#xA;&lt;h3 id=&#34;github-copilot--chatgpt&#34;&gt;GitHub Copilot &amp;amp; ChatGPT&lt;/h3&gt;&#xA;&lt;p&gt;Các công cụ như GitHub Copilot, ChatGPT, và Claude đã thay đổi hoàn toàn workflow của developers:&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;cuộc-cách-mạng-ai-trong-software-engineering&#34;&gt;Cuộc cách mạng AI trong Software Engineering&lt;/h2&gt;
+&lt;p&gt;Trí tuệ nhân tạo (AI) đang thay đổi cách chúng ta phát triển phần mềm. Từ việc viết code tự động đến kiểm thử và bảo trì, AI đang trở thành công cụ không thể thiếu cho mọi developer.&lt;/p&gt;
+&lt;h2 id=&#34;ai-code-assistants---trợ-lý-lập-trình-thông-minh&#34;&gt;AI Code Assistants - Trợ lý lập trình thông minh&lt;/h2&gt;
+&lt;h3 id=&#34;github-copilot--chatgpt&#34;&gt;GitHub Copilot &amp;amp; ChatGPT&lt;/h3&gt;
+&lt;p&gt;Các công cụ như GitHub Copilot, ChatGPT, và Claude đã thay đổi hoàn toàn workflow của developers:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Machine Learning cơ bản cho Developer</title>
       <link>https://huytn593.github.io/blogs/machine-learning-basics/</link>
       <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://huytn593.github.io/blogs/machine-learning-basics/</guid>
-      <description>&lt;h2 id=&#34;machine-learning-là-gì&#34;&gt;Machine Learning là gì?&lt;/h2&gt;&#xA;&lt;p&gt;Machine Learning (ML) là một nhánh của Artificial Intelligence (AI) cho phép máy tính học từ dữ liệu mà không cần được lập trình rõ ràng. Thay vì viết code để giải quyết từng vấn đề cụ thể, bạn cung cấp dữ liệu và thuật toán sẽ tự học pattern.&lt;/p&gt;&#xA;&lt;h2 id=&#34;tại-sao-developer-nên-học-ml&#34;&gt;Tại sao Developer nên học ML?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tích hợp vào ứng dụng&lt;/strong&gt;: Nhiều ứng dụng hiện đại cần ML để cung cấp trải nghiệm tốt hơn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cơ hội nghề nghiệp&lt;/strong&gt;: ML Engineer là một trong những nghề hot nhất hiện nay&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Giải quyết vấn đề thực tế&lt;/strong&gt;: ML có thể giải quyết các vấn đề phức tạp mà code truyền thống khó làm được&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;các-loại-machine-learning&#34;&gt;Các loại Machine Learning&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-supervised-learning&#34;&gt;1. Supervised Learning&lt;/h3&gt;&#xA;&lt;p&gt;Học từ dữ liệu có nhãn (labeled data):&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;machine-learning-là-gì&#34;&gt;Machine Learning là gì?&lt;/h2&gt;
+&lt;p&gt;Machine Learning (ML) là một nhánh của Artificial Intelligence (AI) cho phép máy tính học từ dữ liệu mà không cần được lập trình rõ ràng. Thay vì viết code để giải quyết từng vấn đề cụ thể, bạn cung cấp dữ liệu và thuật toán sẽ tự học pattern.&lt;/p&gt;
+&lt;h2 id=&#34;tại-sao-developer-nên-học-ml&#34;&gt;Tại sao Developer nên học ML?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Tích hợp vào ứng dụng&lt;/strong&gt;: Nhiều ứng dụng hiện đại cần ML để cung cấp trải nghiệm tốt hơn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cơ hội nghề nghiệp&lt;/strong&gt;: ML Engineer là một trong những nghề hot nhất hiện nay&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Giải quyết vấn đề thực tế&lt;/strong&gt;: ML có thể giải quyết các vấn đề phức tạp mà code truyền thống khó làm được&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;các-loại-machine-learning&#34;&gt;Các loại Machine Learning&lt;/h2&gt;
+&lt;h3 id=&#34;1-supervised-learning&#34;&gt;1. Supervised Learning&lt;/h3&gt;
+&lt;p&gt;Học từ dữ liệu có nhãn (labeled data):&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Code Generation: Tương lai của lập trình?</title>
       <link>https://huytn593.github.io/blogs/ai-code-generation/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://huytn593.github.io/blogs/ai-code-generation/</guid>
-      <description>&lt;h2 id=&#34;ai-code-generation-đang-thay-đổi-cách-chúng-ta-code&#34;&gt;AI Code Generation đang thay đổi cách chúng ta code&lt;/h2&gt;&#xA;&lt;p&gt;Từ GitHub Copilot đến ChatGPT, AI code generation tools đang trở thành một phần không thể thiếu trong workflow của nhiều developers. Nhưng liệu AI có thay thế được developers không?&lt;/p&gt;&#xA;&lt;h2 id=&#34;các-công-cụ-ai-code-generation-phổ-biến&#34;&gt;Các công cụ AI Code Generation phổ biến&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-github-copilot&#34;&gt;1. GitHub Copilot&lt;/h3&gt;&#xA;&lt;p&gt;GitHub Copilot sử dụng OpenAI Codex để suggest code trong real-time:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Autocomplete&lt;/strong&gt;: Tự động hoàn thành code dựa trên context&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Code generation&lt;/strong&gt;: Generate entire functions từ comments&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Multi-language support&lt;/strong&gt;: Hỗ trợ nhiều ngôn ngữ lập trình&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Bạn chỉ cần comment:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Function to calculate fibonacci number&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Copilot sẽ suggest:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-chatgpt--gpt-4&#34;&gt;2. ChatGPT / GPT-4&lt;/h3&gt;&#xA;&lt;p&gt;ChatGPT có thể:&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ai-code-generation-đang-thay-đổi-cách-chúng-ta-code&#34;&gt;AI Code Generation đang thay đổi cách chúng ta code&lt;/h2&gt;
+&lt;p&gt;Từ GitHub Copilot đến ChatGPT, AI code generation tools đang trở thành một phần không thể thiếu trong workflow của nhiều developers. Nhưng liệu AI có thay thế được developers không?&lt;/p&gt;
+&lt;h2 id=&#34;các-công-cụ-ai-code-generation-phổ-biến&#34;&gt;Các công cụ AI Code Generation phổ biến&lt;/h2&gt;
+&lt;h3 id=&#34;1-github-copilot&#34;&gt;1. GitHub Copilot&lt;/h3&gt;
+&lt;p&gt;GitHub Copilot sử dụng OpenAI Codex để suggest code trong real-time:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Autocomplete&lt;/strong&gt;: Tự động hoàn thành code dựa trên context&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Code generation&lt;/strong&gt;: Generate entire functions từ comments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language support&lt;/strong&gt;: Hỗ trợ nhiều ngôn ngữ lập trình&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Bạn chỉ cần comment:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Function to calculate fibonacci number
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Copilot sẽ suggest:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fibonacci&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-chatgpt--gpt-4&#34;&gt;2. ChatGPT / GPT-4&lt;/h3&gt;
+&lt;p&gt;ChatGPT có thể:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
