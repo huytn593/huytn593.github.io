@@ -1,0 +1,107 @@
+/* 
+   Reset to Professional Standard.
+   Empty extended.css allows PaperMod defaults to take over.
+   You can add minor professional tweaks here if needed.
+*/
+
+/* Optional: Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Slight radius on images for professional look */
+img {
+    border-radius: 8px;
+}
+
+/* --- Professional Profile / About Page Styles --- */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.profile-header {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    /* PaperMod variable default, or fallback */
+    padding-bottom: 40px;
+}
+
+/* Fallback for var(--border) if not defined in mode */
+[data-theme='light'] .profile-header {
+    border-color: #e5e7eb;
+}
+
+[data-theme='dark'] .profile-header {
+    border-color: #374151;
+}
+
+.profile-avatar {
+    width: 180px !important;
+    height: 180px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 50% !important;
+    /* Fully circular */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
+}
+
+.profile-info h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.profile-info .subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    /* PaperMod variable */
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.profile-social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-content {
+    line-height: 1.8;
+}
+
+.professional-section h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-social-links {
+        justify-content: center;
+    }
+}
+
+/* Home Page Profile Image Fix */
+.profile .profile_inner img {
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    width: 150px !important;
+    height: 150px !important;
+}

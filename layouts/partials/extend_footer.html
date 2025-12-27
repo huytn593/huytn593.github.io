@@ -1,0 +1,98 @@
+<!-- Music Player -->
+<div id="music-player"
+    style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+    <!-- Spinning Disc Image -->
+    <div id="disc-container" style="position: relative; width: 50px; height: 50px;">
+        <img id="music-disc" src="/images/musicdisc.png" alt="Music Disc"
+            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.2); cursor: pointer; transition: transform 0.5s linear;">
+    </div>
+
+    <!-- Hidden audio element -->
+    <audio id="bg-music" loop>
+        <source src="/songs/Serani Poji - Pipo Pipo.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<script>
+    // --- Music Player Logic ---
+    const audio = document.getElementById('bg-music');
+    const disc = document.getElementById('music-disc');
+
+    // State keys
+    const KEY_TIME = 'music_time';
+    const KEY_PLAYING = 'music_should_play';
+
+    // variables
+    let isPlaying = false;
+    let rotation = 0;
+    let interval;
+
+    // Rotation Control
+    function startRotation() {
+        if (interval) clearInterval(interval);
+        interval = setInterval(() => {
+            rotation += 2;
+            disc.style.transform = `rotate(${rotation}deg)`;
+        }, 50);
+    }
+
+    function stopRotation() {
+        if (interval) clearInterval(interval);
+    }
+
+    // Play/Pause Control
+    function togglePlay() {
+        if (isPlaying) {
+            audio.pause();
+            isPlaying = false;
+            stopRotation();
+            sessionStorage.setItem(KEY_PLAYING, 'false');
+        } else {
+            audio.play().then(() => {
+                isPlaying = true;
+                startRotation();
+                sessionStorage.setItem(KEY_PLAYING, 'true');
+            }).catch(e => {
+                console.warn("Autoplay/Play blocked:", e);
+                alert("Please click the music disc to start playing!");
+            });
+        }
+    }
+
+    // --- Persistence & Autoplay Logic ---
+    window.addEventListener('DOMContentLoaded', () => {
+        // 1. Recover Time
+        const savedTime = parseFloat(sessionStorage.getItem(KEY_TIME)) || 0;
+        audio.currentTime = savedTime;
+
+        // 2. Check if we should play (Default to TRUE for "Autoplay")
+        const shouldPlay = sessionStorage.getItem(KEY_PLAYING); // 'true', 'false', or null
+
+        // Try to play if previously playing OR if it's the first visit (null)
+        if (shouldPlay === 'true' || shouldPlay === null) {
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Success
+                    isPlaying = true;
+                    startRotation();
+                }).catch(error => {
+                    // Browser Blocked Autoplay
+                    console.log("Browser blocked autoplay. Waiting for user interaction.");
+                    isPlaying = false; // Ensure state matches reality
+                });
+            }
+        }
+    });
+
+    // 3. Save Time on Page Unload (Navigation)
+    window.addEventListener('beforeunload', () => {
+        sessionStorage.setItem(KEY_TIME, audio.currentTime);
+        // Playing state is updated instantly in togglePlay, but confirming here doesn't hurt
+        // sessionStorage.setItem(KEY_PLAYING, isPlaying); 
+    });
+
+    // 4. Click Listener
+    disc.addEventListener('click', togglePlay);
+</script>

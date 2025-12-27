@@ -1,68 +1,82 @@
 baseURL: "https://huytn593.github.io/"
 languageCode: "vi-vn"
-title: "Trần Phạm Gia Huy | Portfolio"
-theme: "hugo-profile"
+title: "Trần Phạm Gia Huy"
+theme: "PaperMod"
 
 enableRobotsTXT: true
+enableEmoji: true
+enableGitInfo: true
+
+outputs:
+  home: ["HTML", "RSS", "JSON"] # Necessary for search
+
+params:
+  defaultTheme: light
+  # disableThemeToggle: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  searchHidden: false
+  ShowToc: true
+  
+  profileMode:
+    enabled: true
+    title: "Trần Phạm Gia Huy"
+    subtitle: "Sinh viên Công nghệ Phần mềm"
+    imageUrl: "/images/avatar.png"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Avatar"
+    buttons:
+      - name: "Tải CV"
+        url: "https://drive.google.com/drive/folders/1dxly8Fi8glmiynxISlQHBSAZSzsb6rLe?usp=drive_link"
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/huytn593"
+    - name: "email"
+      url: "mailto:huytn593@gmail.com"
+    - name: "discord"
+      url: "https://discord.com/users/571912192090177539"
+      title: "buck593"
+    - name: "steam"
+      url: "https://steamcommunity.com/profiles/76561198451314918/"
+
+  assets:
+    disableHLJS: false
+    favicon: "/favicon.ico"
+
+menu:
+  main:
+    - identifier: home
+      name: Trang chủ
+      url: /
+      weight: 1
+    - identifier: blogs
+      name: Blogs
+      url: /blogs/
+      weight: 5
+    - identifier: projects
+      name: Dự án
+      url: /projects/
+      weight: 15
+    - identifier: about
+      name: Giới thiệu
+      url: /about/
+      weight: 25
+    - identifier: contact
+      name: Liên hệ
+      url: /contact/
+      weight: 30
+    - identifier: search
+      name: Tìm kiếm
+      url: /search/
+      weight: 100
 
 markup:
   goldmark:
     renderer:
       unsafe: true
-
-params:
-  title: "Trần Phạm Gia Huy"
-  description: "Sinh viên Công nghệ Phần mềm | Portfolio cá nhân"
-
-  useBootstrapCDN: true
-
-  theme:
-    disableThemeToggle: false
-    defaultTheme: "dark"
-  
-  navbar:
-    disableSearch: true
-
-  # ================= HERO =================
-  hero:
-    enable: true
-    intro: "Xin chào, mình là"
-    title: "Trần Phạm Gia Huy"
-    subtitle: "Sinh viên Công nghệ Phần mềm"
-    content: >
-      Mình là sinh viên năm 4 ngành Công nghệ Phần mềm tại HUTECH,
-      đang tìm kiếm cơ hội thực tập hoặc công việc phù hợp để phát triển
-      kỹ năng lập trình và áp dụng kiến thức vào thực tế.
-    image: "/images/avatar.png"
-    button:
-      enable: false
-      name: "Tải CV"
-      url: "https://drive.google.com/drive/folders/1dxly8Fi8glmiynxISlQHBSAZSzsb6rLe?usp=drive_link"
-    socialLinks:
-      fontAwesomeIcons:
-        - icon: fab fa-github
-          url: https://github.com/huytn593
-        - icon: fas fa-envelope
-          url: mailto:huytn593@gmail.com
-
-  # ================= ABOUT =================
-  about:
-    enable: true
-    title: "Giới thiệu"
-    content: |
-      Mình là sinh viên năm 4 ngành **Công nghệ Phần mềm**
-      tại **Đại học Công Nghệ TP.HCM (HUTECH)**.
-
-      Mình quan tâm đến phát triển phần mềm, lập trình web và lập trình game.
-      Mình thích học thông qua các dự án thực tế và luôn sẵn sàng học hỏi
-      để nâng cao kỹ năng chuyên môn.
-
-
-  # ================= CONTACT =================
-  contact:
-    enable: true
-    title: "Liên hệ"
-    content: |
-      📧 **Email:** huytn593@gmail.com  
-      📞 **Số điện thoại:** (+84) 939 605 921  
-      📍 **Địa chỉ:** Thành phố Thủ Đức, Việt Nam
