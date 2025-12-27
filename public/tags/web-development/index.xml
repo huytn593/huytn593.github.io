@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web Development on Trần Phạm Gia Huy</title>
-    <link>http://localhost:1313/tags/web-development/</link>
+    <link>https://huytn593.github.io/tags/web-development/</link>
     <description>Recent content in Web Development on Trần Phạm Gia Huy</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-vn</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huytn593.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tìm hiểu về React Server Components</title>
-      <link>http://localhost:1313/blogs/react-server-components/</link>
+      <link>https://huytn593.github.io/blogs/react-server-components/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/react-server-components/</guid>
+      <guid>https://huytn593.github.io/blogs/react-server-components/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;
 &lt;p&gt;React Server Components (RSC) là một tính năng mới mang tính cách mạng trong hệ sinh thái React, cho phép các component được render trên server mà không cần gửi JavaScript xuống client. Đây là bước tiến quan trọng trong việc tối ưu hóa hiệu năng web applications.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-là-gì&#34;&gt;Server Components là gì?&lt;/h2&gt;
@@ -20,9 +20,9 @@
     </item>
     <item>
       <title>TypeScript Best Practices cho Developer</title>
-      <link>http://localhost:1313/blogs/typescript-best-practices/</link>
+      <link>https://huytn593.github.io/blogs/typescript-best-practices/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/typescript-best-practices/</guid>
+      <guid>https://huytn593.github.io/blogs/typescript-best-practices/</guid>
       <description>&lt;h2 id=&#34;tại-sao-nên-sử-dụng-typescript&#34;&gt;Tại sao nên sử dụng TypeScript?&lt;/h2&gt;
 &lt;p&gt;TypeScript đã trở thành một công cụ không thể thiếu trong phát triển web hiện đại. Với khả năng cung cấp type safety, TypeScript giúp giảm thiểu bugs và cải thiện chất lượng code đáng kể.&lt;/p&gt;
 &lt;h2 id=&#34;type-safety-và-code-quality&#34;&gt;Type Safety và Code Quality&lt;/h2&gt;
@@ -30,9 +30,9 @@
     </item>
     <item>
       <title>Next.js 14: Những tính năng mới đáng chú ý</title>
-      <link>http://localhost:1313/blogs/nextjs-14-features/</link>
+      <link>https://huytn593.github.io/blogs/nextjs-14-features/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/nextjs-14-features/</guid>
+      <guid>https://huytn593.github.io/blogs/nextjs-14-features/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu-nextjs-14&#34;&gt;Giới thiệu Next.js 14&lt;/h2&gt;
 &lt;p&gt;Next.js 14 mang đến nhiều cải tiến đáng kể về performance, developer experience, và các tính năng mới. Trong bài viết này, chúng ta sẽ khám phá những điểm nổi bật nhất.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-và-app-router&#34;&gt;Server Components và App Router&lt;/h2&gt;
@@ -56,9 +56,9 @@
     </item>
     <item>
       <title>Software Architecture Patterns: Khi nào sử dụng gì?</title>
-      <link>http://localhost:1313/blogs/software-architecture-patterns/</link>
+      <link>https://huytn593.github.io/blogs/software-architecture-patterns/</link>
       <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/software-architecture-patterns/</guid>
+      <guid>https://huytn593.github.io/blogs/software-architecture-patterns/</guid>
       <description>&lt;h2 id=&#34;tại-sao-architecture-patterns-quan-trọng&#34;&gt;Tại sao Architecture Patterns quan trọng?&lt;/h2&gt;
 &lt;p&gt;Software Architecture Patterns là các giải pháp đã được chứng minh cho các vấn đề thiết kế phổ biến. Hiểu và áp dụng đúng pattern giúp code dễ maintain, scale, và test hơn.&lt;/p&gt;
 &lt;h2 id=&#34;mvc-model-view-controller&#34;&gt;MVC (Model-View-Controller)&lt;/h2&gt;
@@ -97,9 +97,9 @@
     </item>
     <item>
       <title>React Hooks nâng cao: Custom Hooks và Best Practices</title>
-      <link>http://localhost:1313/blogs/react-hooks-advanced/</link>
+      <link>https://huytn593.github.io/blogs/react-hooks-advanced/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/react-hooks-advanced/</guid>
+      <guid>https://huytn593.github.io/blogs/react-hooks-advanced/</guid>
       <description>&lt;h2 id=&#34;custom-hooks-là-gì&#34;&gt;Custom Hooks là gì?&lt;/h2&gt;
 &lt;p&gt;Custom Hooks cho phép bạn tách logic tái sử dụng ra khỏi components. Một custom hook là một function bắt đầu với &amp;ldquo;use&amp;rdquo; và có thể gọi các hooks khác.&lt;/p&gt;
 &lt;h2 id=&#34;tại-sao-cần-custom-hooks&#34;&gt;Tại sao cần Custom Hooks?&lt;/h2&gt;

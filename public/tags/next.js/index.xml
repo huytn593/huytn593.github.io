@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Next.js on Trần Phạm Gia Huy</title>
-    <link>http://localhost:1313/tags/next.js/</link>
+    <link>https://huytn593.github.io/tags/next.js/</link>
     <description>Recent content in Next.js on Trần Phạm Gia Huy</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-vn</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/next.js/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huytn593.github.io/tags/next.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tìm hiểu về React Server Components</title>
-      <link>http://localhost:1313/blogs/react-server-components/</link>
+      <link>https://huytn593.github.io/blogs/react-server-components/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/react-server-components/</guid>
+      <guid>https://huytn593.github.io/blogs/react-server-components/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;
 &lt;p&gt;React Server Components (RSC) là một tính năng mới mang tính cách mạng trong hệ sinh thái React, cho phép các component được render trên server mà không cần gửi JavaScript xuống client. Đây là bước tiến quan trọng trong việc tối ưu hóa hiệu năng web applications.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-là-gì&#34;&gt;Server Components là gì?&lt;/h2&gt;
@@ -20,9 +20,9 @@
     </item>
     <item>
       <title>Next.js 14: Những tính năng mới đáng chú ý</title>
-      <link>http://localhost:1313/blogs/nextjs-14-features/</link>
+      <link>https://huytn593.github.io/blogs/nextjs-14-features/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/nextjs-14-features/</guid>
+      <guid>https://huytn593.github.io/blogs/nextjs-14-features/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu-nextjs-14&#34;&gt;Giới thiệu Next.js 14&lt;/h2&gt;
 &lt;p&gt;Next.js 14 mang đến nhiều cải tiến đáng kể về performance, developer experience, và các tính năng mới. Trong bài viết này, chúng ta sẽ khám phá những điểm nổi bật nhất.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-và-app-router&#34;&gt;Server Components và App Router&lt;/h2&gt;

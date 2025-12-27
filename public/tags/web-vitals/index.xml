@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web Vitals on Trần Phạm Gia Huy</title>
-    <link>http://localhost:1313/tags/web-vitals/</link>
+    <link>https://huytn593.github.io/tags/web-vitals/</link>
     <description>Recent content in Web Vitals on Trần Phạm Gia Huy</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-vn</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web-vitals/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huytn593.github.io/tags/web-vitals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tối ưu hóa hiệu năng Website</title>
-      <link>http://localhost:1313/blogs/web-performance/</link>
+      <link>https://huytn593.github.io/blogs/web-performance/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/web-performance/</guid>
+      <guid>https://huytn593.github.io/blogs/web-performance/</guid>
       <description>&lt;h2 id=&#34;tại-sao-performance-lại-quan-trọng&#34;&gt;Tại sao Performance lại quan trọng?&lt;/h2&gt;
 &lt;p&gt;Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:&lt;/p&gt;
 &lt;ul&gt;
@@ -26,9 +26,9 @@
     </item>
     <item>
       <title>Tối ưu Core Web Vitals để cải thiện SEO</title>
-      <link>http://localhost:1313/blogs/web-vitals-optimization/</link>
+      <link>https://huytn593.github.io/blogs/web-vitals-optimization/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/web-vitals-optimization/</guid>
+      <guid>https://huytn593.github.io/blogs/web-vitals-optimization/</guid>
       <description>&lt;h2 id=&#34;core-web-vitals-là-gì&#34;&gt;Core Web Vitals là gì?&lt;/h2&gt;
 &lt;p&gt;Core Web Vitals là một tập hợp các metrics quan trọng mà Google sử dụng để đánh giá trải nghiệm người dùng trên website. Ba metrics chính là:&lt;/p&gt;
 &lt;ol&gt;

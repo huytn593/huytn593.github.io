@@ -2,86 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/optimization/</loc>
+    <loc>https://huytn593.github.io/tags/optimization/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/performance/</loc>
+    <loc>https://huytn593.github.io/tags/performance/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://huytn593.github.io/tags/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/web-performance/</loc>
+    <loc>https://huytn593.github.io/blogs/web-performance/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web-vitals/</loc>
+    <loc>https://huytn593.github.io/tags/web-vitals/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://huytn593.github.io/tags/ai/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <loc>https://huytn593.github.io/tags/machine-learning/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/software-engineering/</loc>
+    <loc>https://huytn593.github.io/tags/software-engineering/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/ai-future/</loc>
+    <loc>https://huytn593.github.io/blogs/ai-future/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/next.js/</loc>
+    <loc>https://huytn593.github.io/tags/next.js/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/react/</loc>
+    <loc>https://huytn593.github.io/tags/react/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/react-server-components/</loc>
+    <loc>https://huytn593.github.io/blogs/react-server-components/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web-development/</loc>
+    <loc>https://huytn593.github.io/tags/web-development/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/typescript/</loc>
+    <loc>https://huytn593.github.io/tags/typescript/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/typescript-best-practices/</loc>
+    <loc>https://huytn593.github.io/blogs/typescript-best-practices/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/nextjs-14-features/</loc>
+    <loc>https://huytn593.github.io/blogs/nextjs-14-features/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/machine-learning-basics/</loc>
+    <loc>https://huytn593.github.io/blogs/machine-learning-basics/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/web-vitals-optimization/</loc>
+    <loc>https://huytn593.github.io/blogs/web-vitals-optimization/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/architecture/</loc>
+    <loc>https://huytn593.github.io/tags/architecture/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/software-architecture-patterns/</loc>
+    <loc>https://huytn593.github.io/blogs/software-architecture-patterns/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/react-hooks-advanced/</loc>
+    <loc>https://huytn593.github.io/blogs/react-hooks-advanced/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/ai-code-generation/</loc>
+    <loc>https://huytn593.github.io/blogs/ai-code-generation/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://huytn593.github.io/about/</loc>
+    <lastmod>2025-12-27T15:24:05+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/</loc>
+    <loc>https://huytn593.github.io/blogs/</loc>
     <lastmod>2025-12-27T00:34:04+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://huytn593.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://huytn593.github.io/projects/</loc>
+    <lastmod>2025-12-27T15:24:05+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://huytn593.github.io/</loc>
     <lastmod>2025-12-26T00:53:20+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://huytn593.github.io/contact/</loc>
+    <lastmod>2025-12-27T15:24:05+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://huytn593.github.io/search/</loc>
+    <lastmod>2025-12-27T15:24:05+07:00</lastmod>
   </url>
 </urlset>

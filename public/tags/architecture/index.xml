@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Architecture on Trần Phạm Gia Huy</title>
-    <link>http://localhost:1313/tags/architecture/</link>
+    <link>https://huytn593.github.io/tags/architecture/</link>
     <description>Recent content in Architecture on Trần Phạm Gia Huy</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-vn</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:34:04 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huytn593.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Architecture Patterns: Khi nào sử dụng gì?</title>
-      <link>http://localhost:1313/blogs/software-architecture-patterns/</link>
+      <link>https://huytn593.github.io/blogs/software-architecture-patterns/</link>
       <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/software-architecture-patterns/</guid>
+      <guid>https://huytn593.github.io/blogs/software-architecture-patterns/</guid>
       <description>&lt;h2 id=&#34;tại-sao-architecture-patterns-quan-trọng&#34;&gt;Tại sao Architecture Patterns quan trọng?&lt;/h2&gt;
 &lt;p&gt;Software Architecture Patterns là các giải pháp đã được chứng minh cho các vấn đề thiết kế phổ biến. Hiểu và áp dụng đúng pattern giúp code dễ maintain, scale, và test hơn.&lt;/p&gt;
 &lt;h2 id=&#34;mvc-model-view-controller&#34;&gt;MVC (Model-View-Controller)&lt;/h2&gt;

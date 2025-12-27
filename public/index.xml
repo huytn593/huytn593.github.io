@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on Trần Phạm Gia Huy</title>
-    <link>http://localhost:1313/</link>
+    <link>https://huytn593.github.io/</link>
     <description>Recent content in Home on Trần Phạm Gia Huy</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-vn</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huytn593.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tối ưu hóa hiệu năng Website</title>
-      <link>http://localhost:1313/blogs/web-performance/</link>
+      <link>https://huytn593.github.io/blogs/web-performance/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/web-performance/</guid>
+      <guid>https://huytn593.github.io/blogs/web-performance/</guid>
       <description>&lt;h2 id=&#34;tại-sao-performance-lại-quan-trọng&#34;&gt;Tại sao Performance lại quan trọng?&lt;/h2&gt;
 &lt;p&gt;Trong thế giới web hiện đại, tốc độ tải trang trực tiếp ảnh hưởng đến:&lt;/p&gt;
 &lt;ul&gt;
@@ -25,9 +25,9 @@
     </item>
     <item>
       <title>Tương lai của AI trong Công nghệ phần mềm</title>
-      <link>http://localhost:1313/blogs/ai-future/</link>
+      <link>https://huytn593.github.io/blogs/ai-future/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/ai-future/</guid>
+      <guid>https://huytn593.github.io/blogs/ai-future/</guid>
       <description>&lt;h2 id=&#34;cuộc-cách-mạng-ai-trong-software-engineering&#34;&gt;Cuộc cách mạng AI trong Software Engineering&lt;/h2&gt;
 &lt;p&gt;Trí tuệ nhân tạo (AI) đang thay đổi cách chúng ta phát triển phần mềm. Từ việc viết code tự động đến kiểm thử và bảo trì, AI đang trở thành công cụ không thể thiếu cho mọi developer.&lt;/p&gt;
 &lt;h2 id=&#34;ai-code-assistants---trợ-lý-lập-trình-thông-minh&#34;&gt;AI Code Assistants - Trợ lý lập trình thông minh&lt;/h2&gt;
@@ -36,9 +36,9 @@
     </item>
     <item>
       <title>Tìm hiểu về React Server Components</title>
-      <link>http://localhost:1313/blogs/react-server-components/</link>
+      <link>https://huytn593.github.io/blogs/react-server-components/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/react-server-components/</guid>
+      <guid>https://huytn593.github.io/blogs/react-server-components/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;
 &lt;p&gt;React Server Components (RSC) là một tính năng mới mang tính cách mạng trong hệ sinh thái React, cho phép các component được render trên server mà không cần gửi JavaScript xuống client. Đây là bước tiến quan trọng trong việc tối ưu hóa hiệu năng web applications.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-là-gì&#34;&gt;Server Components là gì?&lt;/h2&gt;
@@ -46,9 +46,9 @@
     </item>
     <item>
       <title>TypeScript Best Practices cho Developer</title>
-      <link>http://localhost:1313/blogs/typescript-best-practices/</link>
+      <link>https://huytn593.github.io/blogs/typescript-best-practices/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/typescript-best-practices/</guid>
+      <guid>https://huytn593.github.io/blogs/typescript-best-practices/</guid>
       <description>&lt;h2 id=&#34;tại-sao-nên-sử-dụng-typescript&#34;&gt;Tại sao nên sử dụng TypeScript?&lt;/h2&gt;
 &lt;p&gt;TypeScript đã trở thành một công cụ không thể thiếu trong phát triển web hiện đại. Với khả năng cung cấp type safety, TypeScript giúp giảm thiểu bugs và cải thiện chất lượng code đáng kể.&lt;/p&gt;
 &lt;h2 id=&#34;type-safety-và-code-quality&#34;&gt;Type Safety và Code Quality&lt;/h2&gt;
@@ -56,9 +56,9 @@
     </item>
     <item>
       <title>Next.js 14: Những tính năng mới đáng chú ý</title>
-      <link>http://localhost:1313/blogs/nextjs-14-features/</link>
+      <link>https://huytn593.github.io/blogs/nextjs-14-features/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/nextjs-14-features/</guid>
+      <guid>https://huytn593.github.io/blogs/nextjs-14-features/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu-nextjs-14&#34;&gt;Giới thiệu Next.js 14&lt;/h2&gt;
 &lt;p&gt;Next.js 14 mang đến nhiều cải tiến đáng kể về performance, developer experience, và các tính năng mới. Trong bài viết này, chúng ta sẽ khám phá những điểm nổi bật nhất.&lt;/p&gt;
 &lt;h2 id=&#34;server-components-và-app-router&#34;&gt;Server Components và App Router&lt;/h2&gt;
@@ -82,9 +82,9 @@
     </item>
     <item>
       <title>Machine Learning cơ bản cho Developer</title>
-      <link>http://localhost:1313/blogs/machine-learning-basics/</link>
+      <link>https://huytn593.github.io/blogs/machine-learning-basics/</link>
       <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/machine-learning-basics/</guid>
+      <guid>https://huytn593.github.io/blogs/machine-learning-basics/</guid>
       <description>&lt;h2 id=&#34;machine-learning-là-gì&#34;&gt;Machine Learning là gì?&lt;/h2&gt;
 &lt;p&gt;Machine Learning (ML) là một nhánh của Artificial Intelligence (AI) cho phép máy tính học từ dữ liệu mà không cần được lập trình rõ ràng. Thay vì viết code để giải quyết từng vấn đề cụ thể, bạn cung cấp dữ liệu và thuật toán sẽ tự học pattern.&lt;/p&gt;
 &lt;h2 id=&#34;tại-sao-developer-nên-học-ml&#34;&gt;Tại sao Developer nên học ML?&lt;/h2&gt;
@@ -99,9 +99,9 @@
     </item>
     <item>
       <title>Tối ưu Core Web Vitals để cải thiện SEO</title>
-      <link>http://localhost:1313/blogs/web-vitals-optimization/</link>
+      <link>https://huytn593.github.io/blogs/web-vitals-optimization/</link>
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/web-vitals-optimization/</guid>
+      <guid>https://huytn593.github.io/blogs/web-vitals-optimization/</guid>
       <description>&lt;h2 id=&#34;core-web-vitals-là-gì&#34;&gt;Core Web Vitals là gì?&lt;/h2&gt;
 &lt;p&gt;Core Web Vitals là một tập hợp các metrics quan trọng mà Google sử dụng để đánh giá trải nghiệm người dùng trên website. Ba metrics chính là:&lt;/p&gt;
 &lt;ol&gt;
@@ -120,9 +120,9 @@
     </item>
     <item>
       <title>Software Architecture Patterns: Khi nào sử dụng gì?</title>
-      <link>http://localhost:1313/blogs/software-architecture-patterns/</link>
+      <link>https://huytn593.github.io/blogs/software-architecture-patterns/</link>
       <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/software-architecture-patterns/</guid>
+      <guid>https://huytn593.github.io/blogs/software-architecture-patterns/</guid>
       <description>&lt;h2 id=&#34;tại-sao-architecture-patterns-quan-trọng&#34;&gt;Tại sao Architecture Patterns quan trọng?&lt;/h2&gt;
 &lt;p&gt;Software Architecture Patterns là các giải pháp đã được chứng minh cho các vấn đề thiết kế phổ biến. Hiểu và áp dụng đúng pattern giúp code dễ maintain, scale, và test hơn.&lt;/p&gt;
 &lt;h2 id=&#34;mvc-model-view-controller&#34;&gt;MVC (Model-View-Controller)&lt;/h2&gt;
@@ -161,9 +161,9 @@
     </item>
     <item>
       <title>React Hooks nâng cao: Custom Hooks và Best Practices</title>
-      <link>http://localhost:1313/blogs/react-hooks-advanced/</link>
+      <link>https://huytn593.github.io/blogs/react-hooks-advanced/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/react-hooks-advanced/</guid>
+      <guid>https://huytn593.github.io/blogs/react-hooks-advanced/</guid>
       <description>&lt;h2 id=&#34;custom-hooks-là-gì&#34;&gt;Custom Hooks là gì?&lt;/h2&gt;
 &lt;p&gt;Custom Hooks cho phép bạn tách logic tái sử dụng ra khỏi components. Một custom hook là một function bắt đầu với &amp;ldquo;use&amp;rdquo; và có thể gọi các hooks khác.&lt;/p&gt;
 &lt;h2 id=&#34;tại-sao-cần-custom-hooks&#34;&gt;Tại sao cần Custom Hooks?&lt;/h2&gt;
@@ -179,9 +179,9 @@
     </item>
     <item>
       <title>AI Code Generation: Tương lai của lập trình?</title>
-      <link>http://localhost:1313/blogs/ai-code-generation/</link>
+      <link>https://huytn593.github.io/blogs/ai-code-generation/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/ai-code-generation/</guid>
+      <guid>https://huytn593.github.io/blogs/ai-code-generation/</guid>
       <description>&lt;h2 id=&#34;ai-code-generation-đang-thay-đổi-cách-chúng-ta-code&#34;&gt;AI Code Generation đang thay đổi cách chúng ta code&lt;/h2&gt;
 &lt;p&gt;Từ GitHub Copilot đến ChatGPT, AI code generation tools đang trở thành một phần không thể thiếu trong workflow của nhiều developers. Nhưng liệu AI có thay thế được developers không?&lt;/p&gt;
 &lt;h2 id=&#34;các-công-cụ-ai-code-generation-phổ-biến&#34;&gt;Các công cụ AI Code Generation phổ biến&lt;/h2&gt;
@@ -205,12 +205,12 @@
     </item>
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://huytn593.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://huytn593.github.io/about/</guid>
       <description>&lt;div class=&#34;profile-container&#34;&gt;
     &lt;div class=&#34;profile-header&#34;&gt;
-        &lt;img src=&#34;http://localhost:1313/images/avatar.png&#34; alt=&#34;Trần Phạm Gia Huy&#34; class=&#34;profile-avatar&#34;&gt;
+        &lt;img src=&#34;https://huytn593.github.io/images/avatar.png&#34; alt=&#34;Trần Phạm Gia Huy&#34; class=&#34;profile-avatar&#34;&gt;
         &lt;div class=&#34;profile-info&#34;&gt;
             &lt;h1&gt;Trần Phạm Gia Huy&lt;/h1&gt;
             &lt;p class=&#34;subtitle&#34;&gt;Software Engineering Student&lt;/p&gt;
@@ -227,16 +227,16 @@ Mình có kinh nghiệm làm việc với cả &lt;strong&gt;Web Development&lt;
     </item>
     <item>
       <title>Dự Án Của Tôi</title>
-      <link>http://localhost:1313/projects/</link>
+      <link>https://huytn593.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
+      <guid>https://huytn593.github.io/projects/</guid>
       <description>Tổng hợp các dự án cá nhân và đóng góp của tôi</description>
     </item>
     <item>
       <title>Liên hệ</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://huytn593.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://huytn593.github.io/contact/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;📧 &lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:huytn593@gmail.com&#34;&gt;huytn593@gmail.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;📞 &lt;strong&gt;Số điện thoại:&lt;/strong&gt; (+84) 939 605 921&lt;/li&gt;
