@@ -32,7 +32,7 @@ params:
     imageTitle: "Avatar"
     buttons:
       - name: "Tải CV"
-        url: "https://www.canva.com/design/DAGe6jQAU7A/QLSWKSCPm5K2CZ4bfCMlUQ/edit"
+        url: "/CV/CV%20-%20GIA%20HUY.pdf"
 
   socialIcons:
     - name: "github"
